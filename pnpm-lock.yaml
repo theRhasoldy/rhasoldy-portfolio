@@ -14,6 +14,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.3.3)(tailwindcss@3.4.1)
+  '@astrojs/ts-plugin':
+    specifier: ^1.4.0
+    version: 1.4.0
   '@types/react':
     specifier: ^18.2.55
     version: 18.2.55
@@ -79,6 +82,9 @@ devDependencies:
   eslint-plugin-tailwindcss:
     specifier: ^3.14.2
     version: 3.14.2(tailwindcss@3.4.1)
+  postcss:
+    specifier: ^8.4.34
+    version: 8.4.34
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
@@ -250,6 +256,17 @@ packages:
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@astrojs/ts-plugin@1.4.0:
+    resolution: {integrity: sha512-QfqzM7S8MVlM0jQS1iUS2q6zB00MaGILR0Yc2OjvnveS01+vl62MQqs87unNAXpG1walcIWLc0mTCsfd3GCzMg==}
+    dependencies:
+      '@astrojs/compiler': 2.5.3
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@volar/language-core': 1.10.10
+      '@volar/typescript': 1.10.10
+      semver: 7.6.0
+      vscode-languageserver-textdocument: 1.0.11
     dev: false
 
   /@babel/code-frame@7.23.5:
@@ -1290,6 +1307,12 @@ packages:
       vscode-uri: 3.0.8
     dev: false
 
+  /@volar/language-core@1.10.10:
+    resolution: {integrity: sha512-nsV1o3AZ5n5jaEAObrS3MWLBWaGwUj/vAsc15FVNIv+DbpizQRISg9wzygsHBr56ELRH8r4K75vkYNMtsSNNWw==}
+    dependencies:
+      '@volar/source-map': 1.10.10
+    dev: false
+
   /@volar/language-core@1.11.1:
     resolution: {integrity: sha512-dOcNn3i9GgZAcJt43wuaEykSluAuOkQgzni1cuxLxTV0nJKanQztp7FxyswdRILaKH+P2XZMPRp2S4MV/pElCw==}
     dependencies:
@@ -1321,10 +1344,23 @@ packages:
       vscode-uri: 3.0.8
     dev: false
 
+  /@volar/source-map@1.10.10:
+    resolution: {integrity: sha512-GVKjLnifV4voJ9F0vhP56p4+F3WGf+gXlRtjFZsv6v3WxBTWU3ZVeaRaEHJmWrcv5LXmoYYpk/SC25BKemPRkg==}
+    dependencies:
+      muggle-string: 0.3.1
+    dev: false
+
   /@volar/source-map@1.11.1:
     resolution: {integrity: sha512-hJnOnwZ4+WT5iupLRnuzbULZ42L7BWWPMmruzwtLhJfpDVoZLjNBxHDi2sY2bgZXCKlpU5XcsMFoYrsQmPhfZg==}
     dependencies:
       muggle-string: 0.3.1
+    dev: false
+
+  /@volar/typescript@1.10.10:
+    resolution: {integrity: sha512-4a2r5bdUub2m+mYVnLu2wt59fuoYWe7nf0uXtGHU8QQ5LDNfzAR0wK7NgDiQ9rcl2WT3fxT2AA9AylAwFtj50A==}
+    dependencies:
+      '@volar/language-core': 1.10.10
+      path-browserify: 1.0.1
     dev: false
 
   /@volar/typescript@1.11.1:
