@@ -1,14 +1,46 @@
 module.exports = {
+  ignorePatterns: [
+    "dist",
+    ".eslintrc.cjs",
+    "prettier.config.cjs",
+    "postcss.config.cjs",
+    "!.storybook",
+  ],
   env: {
     browser: true,
     es2021: true,
   },
+  root: true,
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:astro/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:jsx-a11y/recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier",
   ],
+  plugins: ["@typescript-eslint", "react", "react-hooks", "jsx-a11y", "import"],
+  settings: {
+    ecmaVersion: "latest",
+    react: {
+      version: "detect",
+    },
+    "import/resolver": {
+      node: true,
+      typescript: true,
+    },
+    tailwindcss: {
+      callees: ["cva", "cx", "className", "variants", "variant"],
+    },
+  },
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
   overrides: [
     {
       env: {
@@ -37,18 +69,36 @@ module.exports = {
       },
     },
   ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-  plugins: ["@typescript-eslint", "react"],
   rules: {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
     indent: ["warn", 2],
     "linebreak-style": ["warn", "unix"],
     quotes: ["warn", "double"],
     semi: ["warn", "always"],
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-uses-react": "off",
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        pathGroups: [
+          {
+            pattern: "$/**",
+            group: "internal",
+          },
+        ],
+        pathGroupsExcludedImportTypes: ["builtin"],
+        groups: [
+          ["builtin", "external"],
+          ["internal"],
+          ["parent", "sibling", "index"],
+          "unknown",
+        ],
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: true,
+        },
+      },
+    ],
   },
 };
