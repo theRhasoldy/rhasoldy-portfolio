@@ -73,6 +73,7 @@ module.exports = {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    "tailwindcss/classnames-order": "off",
     indent: ["warn", 2],
     "linebreak-style": ["warn", "unix"],
     quotes: ["warn", "double"],
