@@ -7,9 +7,10 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 
 <DefaultLayout title="Home" description="Home Page">
   <Hero />
-  <Quote client:visible className="my-64">
-    A developer with a design background focusing on creating experiences that
-    deliver and kickstart your dreams
-  </Quote>
+  <Quote
+    quote="A developer with a design background focusing on creating experiences that deliver and kickstart your dreams"
+    client:only="react"
+    className="my-64"
+  />
   <Work />
 </DefaultLayout>

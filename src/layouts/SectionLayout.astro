@@ -2,10 +2,11 @@
 import Quote from "../components/widgets/Quote";
 type Props = {
   title: string;
+  quote: string;
   className?: string;
 };
 
-const { title, className } = Astro.props;
+const { title, quote, className } = Astro.props;
 ---
 
 <section class={className}>
@@ -19,9 +20,7 @@ const { title, className } = Astro.props;
     </h2>
   </div>
 
-  <Quote client:visible className="md:w-1/2 md:pr-0">
-    <slot name="description" />
-  </Quote>
+  <Quote quote={quote} client:only="react" className="md:w-1/2 md:pr-0" />
 
   <div class="px-9vw mt-24">
     <slot />
