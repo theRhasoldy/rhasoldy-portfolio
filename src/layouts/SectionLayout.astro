@@ -22,5 +22,8 @@ const { title, className } = Astro.props;
   <Quote className="md:w-1/2 md:pr-0">
     <slot name="description" />
   </Quote>
-  <slot />
+
+  <div class="px-9vw mt-24">
+    <slot />
+  </div>
 </section>
