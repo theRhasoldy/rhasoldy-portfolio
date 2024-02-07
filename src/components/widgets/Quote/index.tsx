@@ -32,10 +32,14 @@ const Quote = ({ className, quote }: { className?: string; quote: string }) => {
 
   return (
     <p ref={ref} className={clsx("px-9vw font-serif md:text-xl", className)}>
-      <span className="text-primary-dark block">{"/**"}</span>
+      <span aria-hidden className="text-primary-dark block">
+        {"/**"}
+      </span>
       <motion.span>{displayText}</motion.span>
       <Blinker />
-      <span className="text-primary-dark block">{"*/"}</span>
+      <span aria-hidden className="text-primary-dark block">
+        {"*/"}
+      </span>
     </p>
   );
 };
