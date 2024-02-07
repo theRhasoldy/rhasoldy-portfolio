@@ -16,7 +16,8 @@ const blinkerVariants: Variants = {
 
 const Blinker = () => {
   return (
-    <motion.div
+    <motion.span
+      aria-hidden
       animate="blinking"
       variants={blinkerVariants}
       className="bg-accent ml-1 inline-block h-5 w-[2px] translate-y-1 md:w-[3px]"
