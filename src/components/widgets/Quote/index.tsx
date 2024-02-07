@@ -1,8 +1,15 @@
+import clsx from "clsx";
 import type { ReactNode } from "react";
 
-const Quote = ({ children }: { children: ReactNode }) => {
+const Quote = ({
+  className,
+  children,
+}: {
+  className: string;
+  children: ReactNode;
+}) => {
   return (
-    <p className="px-9vw font-serif md:text-xl">
+    <p className={clsx("px-9vw font-serif md:text-xl", className)}>
       <span className="text-primary-dark block">{"/**"}</span>
       {children}
       <span className="text-primary-dark block">{"*/"}</span>
