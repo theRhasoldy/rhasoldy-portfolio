@@ -1,9 +1,9 @@
 import { useMediaQuery } from "@uidotdev/usehooks";
 
-import CV from "../../icons/cv.svg";
-import Github from "../../icons/github.svg";
-import Linkedin from "../../icons/linkedin.svg";
-import RhasoldyLogo from "../../icons/rhasoldy.svg";
+import CV from "../icons/cv.svg";
+import Github from "../icons/github.svg";
+import Linkedin from "../icons/linkedin.svg";
+import RhasoldyLogo from "../icons/rhasoldy.svg";
 
 const Navbar = () => {
   const links = [
@@ -15,7 +15,7 @@ const Navbar = () => {
   const isTablet = useMediaQuery("(max-width: 1024px)");
 
   return (
-    <nav className="lg:px-176 flex items-center justify-between px-8 py-4 ">
+    <nav className="px-9vw flex items-center justify-between py-4">
       <a href="/" aria-label="home link">
         <img src={RhasoldyLogo.src} alt="logo" />
       </a>
