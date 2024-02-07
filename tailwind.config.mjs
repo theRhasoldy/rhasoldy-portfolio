@@ -25,7 +25,7 @@ export default {
         "9vw": "9vw",
       },
       fontSize: {
-        clamp: "clamp(2rem, 11.625vw, 13.5rem)",
+        clamp: "clamp(2rem, 12vw, 14.5rem)",
       },
     },
   },
