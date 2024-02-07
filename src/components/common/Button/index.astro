@@ -1,0 +1,29 @@
+---
+type Props = {
+  href: string;
+};
+
+const { href } = Astro.props;
+---
+
+<a
+  class="transition duration-300 ease bg-primary text-background border-background inline-block touch-manipulation border-2 px-6 py-3 text-center font-serif text-sm sm:text-base sm:px-10 sm:py-4"
+  href={href}
+>
+  <slot />
+</a>
+
+<style>
+  a {
+    box-shadow:
+      #ffcf70 5px 5px 0 0,
+      #000 5px 5px 0 2px;
+  }
+
+  a:hover {
+    box-shadow:
+      #ffcf70 2px 2px 0 0,
+      #000 2px 2px 0 2px;
+    transform: translate(2px, 2px);
+  }
+</style>
