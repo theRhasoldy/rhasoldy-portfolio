@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import type { ReactNode } from "react";
 
+import Blinker from "./Blinker";
+
 const Quote = ({
   className,
   children,
@@ -11,7 +13,10 @@ const Quote = ({
   return (
     <p className={clsx("px-9vw font-serif md:text-xl", className)}>
       <span className="text-primary-dark block">{"/**"}</span>
-      {children}
+      <span>
+        {children}
+        <Blinker />
+      </span>
       <span className="text-primary-dark block">{"*/"}</span>
     </p>
   );
