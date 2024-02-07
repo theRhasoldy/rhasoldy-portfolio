@@ -2,6 +2,10 @@
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    fontFamily: {
+      serif: ["IBM Plex Mono", "monospace"],
+      sans: ["Poppins", "serif"],
+    },
     extend: {
       colors: {
         background: "#101010",
@@ -18,7 +22,10 @@ export default {
         },
       },
       padding: {
-        176: "11rem",
+        "9vw": "9vw",
+      },
+      fontSize: {
+        clamp: "clamp(2rem, 11.625vw, 13.5rem)",
       },
     },
   },
