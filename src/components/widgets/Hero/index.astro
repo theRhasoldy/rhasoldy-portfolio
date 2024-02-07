@@ -3,12 +3,14 @@ import HeroText from "./HeroText.astro";
 import Button from "../../common/Button/index.astro";
 ---
 
-<section
+<header
   class="flex flex-col gap-40 justify-center items-center px-9vw min-h-screen-mobile"
 >
   <HeroText />
   <div class="flex flex-col gap-6">
     <Button href="/#contact">contact me!!</Button>
-    <a class="block font-serif text-accent" href="/">|| [scroll down]()</a>
+    <a class="block font-serif text-accent text-xs md:text-base" href="/">
+      || [scroll down]()
+    </a>
   </div>
-</section>
+</header>

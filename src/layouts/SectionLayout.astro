@@ -1,0 +1,26 @@
+---
+import Quote from "../components/widgets/Quote";
+type Props = {
+  title: string;
+  className?: string;
+};
+
+const { title, className } = Astro.props;
+---
+
+<section class={className}>
+  <div class="w-full flex flex-col items-center">
+    <p class="text-primary-dark font-serif"><slot name="quote" /></p>
+    <h2
+      aria-label={title}
+      class="flex flex-wrap text-4xl md:text-5xl font-bold uppercase w-60 md:w-80"
+    >
+      <slot name="title" />
+    </h2>
+  </div>
+
+  <Quote>
+    <slot name="description" />
+  </Quote>
+  <slot />
+</section>
