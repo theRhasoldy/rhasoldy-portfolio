@@ -18,7 +18,7 @@ export default {
         },
       },
       padding: {
-        xl: "11rem",
+        176: "11rem",
       },
     },
   },
