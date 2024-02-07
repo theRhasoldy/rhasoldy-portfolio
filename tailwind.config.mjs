@@ -9,17 +9,25 @@ export default {
     extend: {
       colors: {
         background: "#101010",
-        dominant: "#FDFDFD",
         primary: {
+          DEFAULT: "#FDFDFD",
+        },
+        secondary: {
           light: "#F5F5F5",
           DEFAULT: "#FF4FA3",
           dark: "#F5F5F5",
         },
-        secondary: {
+        accent: {
           light: "#F5F5F5",
           DEFAULT: "#FFCF70",
           dark: "#F5F5F5",
         },
+      },
+      height: {
+        "screen-mobile": "100dvh",
+      },
+      minHeight: {
+        "screen-mobile": "100dvh",
       },
       padding: {
         "9vw": "9vw",

@@ -19,7 +19,7 @@ const { title, description } = Astro.props;
     <meta name="author" content="rhasoldy" />
     <title>{title}</title>
   </head>
-  <body class="bg-background text-dominant">
+  <body class="bg-background text-primary">
     <Navbar client:only="react" />
     <slot />
   </body>
