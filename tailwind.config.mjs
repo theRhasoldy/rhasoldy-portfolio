@@ -28,7 +28,7 @@ export default {
         "screen-mobile": "100dvh",
       },
       minHeight: {
-        "screen-mobile": "100dvh",
+        "screen-mobile": "calc(100dvh - 4.75rem)",
       },
       padding: {
         "9vw": "9vw",
