@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/widgets/Navbar";
+import SmoothScroll from "../components/widgets/SmoothScroll";
 type Props = {
   title: string;
   description: string;
@@ -21,6 +22,8 @@ const { title, description } = Astro.props;
   </head>
   <body class="bg-background text-primary">
     <Navbar client:only="react" />
-    <slot />
+    <SmoothScroll client:only="react">
+      <slot />
+    </SmoothScroll>
   </body>
 </html>
