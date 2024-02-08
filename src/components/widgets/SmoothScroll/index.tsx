@@ -5,8 +5,7 @@ import type { ReactNode } from "react";
 
 const SmoothScroll = ({ children }: { children: ReactNode }) => {
   const options: ReactLenisOptions = {
-    duration: 5,
-    lerp: 0.075,
+    lerp: 0.1,
     syncTouch: true,
   };
 
