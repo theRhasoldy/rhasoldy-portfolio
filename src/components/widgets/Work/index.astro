@@ -1,5 +1,6 @@
 ---
 import SectionLayout from "../../../layouts/SectionLayout.astro";
+import ProjectSwiper from "../ProjectSwiper";
 ---
 
 <SectionLayout
@@ -14,5 +15,5 @@ import SectionLayout from "../../../layouts/SectionLayout.astro";
     <span class="block w-full text-end">Work</span>
   </Fragment>
 
-  <p>Hello world</p>
+  <ProjectSwiper client:only="react" />
 </SectionLayout>
