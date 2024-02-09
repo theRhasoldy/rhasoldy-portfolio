@@ -27,12 +27,13 @@ const ProjectSwiper = ({ title, href }: ProjectSwiperProps) => {
         parallax={{ enabled: true }}
         onSwiper={swiper => setSwiper(swiper)}
         onSlideChange={() => setIndex(swiper?.activeIndex || 0)}
-        wrapperClass="px-4 md:px-9vw "
         modules={[A11y, Mousewheel, Parallax]}
-        slidesPerView={1.075}
+        slidesPerView={1}
+        spaceBetween={16}
         breakpoints={{
-          769: {
-            slidesPerView: 1.25,
+          768: {
+            spaceBetween: 48,
+            slidesPerView: 1.15,
           },
         }}
       >
