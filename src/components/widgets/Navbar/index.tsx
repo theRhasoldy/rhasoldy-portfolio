@@ -15,7 +15,7 @@ const Navbar = () => {
   const isTablet = useMediaQuery("(max-width: 1024px)");
 
   return (
-    <nav className="px-9vw flex items-center justify-between py-4">
+    <nav className="sm:px-9vw flex items-center justify-between p-4">
       <a href="/" aria-label="home link">
         <img src={RhasoldyLogo.src} alt="logo" />
       </a>

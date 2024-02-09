@@ -19,16 +19,20 @@ export default {
           dark: "#F5F5F5",
         },
         accent: {
-          light: "#F5F5F5",
+          light: "#FFF8EB",
           DEFAULT: "#FFCF70",
-          dark: "#F5F5F5",
+          dark: "#FFA320",
         },
       },
       height: {
         "screen-mobile": "100dvh",
+        card: "clamp(22rem, 48vw, 48rem)",
       },
       minHeight: {
         "screen-mobile": "calc(100dvh - 4.75rem)",
+      },
+      margin: {
+        192: "12rem",
       },
       padding: {
         "9vw": "9vw",
