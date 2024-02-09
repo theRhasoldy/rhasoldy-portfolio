@@ -1,10 +1,15 @@
+import WindowControls from "../../icons/window-controls.svg";
+
 const ProjectWindow = ({ src, alt }: { src: string; alt: string }) => {
   return (
-    <img
-      className="max-h-[48rem] min-h-4 w-full object-cover"
-      src={src}
-      alt={alt}
-    />
+    <div className="border-primary border text-end">
+      <img src={WindowControls.src} className="inline-block px-6 py-3" alt="" />
+      <img
+        className="h-card border-primary w-full border-t object-cover"
+        src={src}
+        alt={alt}
+      />
+    </div>
   );
 };
 
