@@ -20,7 +20,11 @@ const { title, quote, className } = Astro.props;
     </h2>
   </div>
 
-  <Quote quote={quote} client:only="react" className="md:w-1/2 md:pr-0" />
+  <Quote
+    quote={quote}
+    client:only="react"
+    className="w-full md:w-1/2 md:pr-0"
+  />
 
   <div class="mt-24">
     <slot />

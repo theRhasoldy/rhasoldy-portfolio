@@ -10,9 +10,10 @@ import ProjectWindow from "./ProjectWindow";
 
 type ProjectSwiperProps = {
   title: string;
+  href: string;
 };
 
-const ProjectSwiper = ({ title }: ProjectSwiperProps) => {
+const ProjectSwiper = ({ title, href }: ProjectSwiperProps) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const [index, setIndex] = useState(0);
 
@@ -21,14 +22,15 @@ const ProjectSwiper = ({ title }: ProjectSwiperProps) => {
       <Swiper
         grabCursor
         mousewheel={{ thresholdTime: 200, forceToAxis: true }}
+        resistanceRatio={0.95}
+        speed={750}
+        parallax={{ enabled: true }}
         onSwiper={swiper => setSwiper(swiper)}
         onSlideChange={() => setIndex(swiper?.activeIndex || 0)}
-        wrapperClass="w-screen px-4 sm:px-9vw "
-        modules={[A11y, Mousewheel]}
+        wrapperClass="px-4 md:px-9vw "
+        modules={[A11y, Mousewheel, Parallax]}
+        slidesPerView={1.075}
         breakpoints={{
-          768: {
-            slidesPerView: 1,
-          },
           769: {
             slidesPerView: 1.25,
           },
@@ -36,6 +38,7 @@ const ProjectSwiper = ({ title }: ProjectSwiperProps) => {
       >
         <SwiperSlide>
           <ProjectWindow
+            href={href}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
             alt="Project 1"
           />
