@@ -25,7 +25,7 @@ const ProjectCard = () => {
 
   return (
     <div className="md:pr-9vw px-4 md:pl-0">
-      <div
+      <article
         ref={ref}
         className="border-primary-dark h-card grid w-full border p-3 font-serif md:p-6"
       >
@@ -51,7 +51,7 @@ const ProjectCard = () => {
         >
           read case study
         </a>
-      </div>
+      </article>
     </div>
   );
 };
