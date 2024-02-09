@@ -14,7 +14,7 @@ const ProjectWindow = ({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="border-primary block border text-end"
+      className="border-primary-dark block border text-end"
     >
       <img
         src={WindowControls.src}
@@ -22,7 +22,7 @@ const ProjectWindow = ({
         alt=""
       />
       <img
-        className="h-window border-primary w-full border-t object-cover"
+        className="h-window border-primary-dark w-full border-t object-cover"
         src={src}
         alt={alt}
       />

@@ -21,12 +21,12 @@ const ProjectCard = () => {
         ease: "easeOut",
       },
     );
-  }, [isInView, animate, ref]);
+  }, [isInView, animate, ref, isMobile]);
 
   return (
     <div
       ref={ref}
-      className="border-primary h-card ml-4 mr-8 w-full border pr-8 sm:ml-8"
+      className="border-primary-dark h-card ml-4 mr-8 w-full border pr-8 sm:ml-8"
     >
       <h3>Hello World</h3>
     </div>
