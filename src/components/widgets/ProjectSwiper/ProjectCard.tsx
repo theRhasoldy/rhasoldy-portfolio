@@ -26,9 +26,30 @@ const ProjectCard = () => {
   return (
     <div
       ref={ref}
-      className="border-primary-dark h-card ml-4 mr-8 w-full border pr-8 sm:ml-8"
+      className="border-primary-dark h-card ml-4 mr-8 grid w-full border p-3 pr-8 font-serif sm:ml-8 md:w-3/4 md:p-6"
     >
-      <h3>Hello World</h3>
+      <h3 className="font-sans text-4xl font-bold uppercase md:text-5xl">
+        Hello World
+      </h3>
+      <p className="self-start text-sm md:text-base">
+        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+        enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
+        exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
+        nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
+        minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure
+        elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor
+        Lorem duis laboris cupidatat officia voluptate. Culpa proident
+        adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.
+        Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa
+        et culpa duis.
+      </p>
+      <a
+        className="border-secondary text-secondary hover:bg-secondary hover:text-background w-fit self-end border px-4 py-2"
+        href="/"
+      >
+        read case study
+      </a>
     </div>
   );
 };
