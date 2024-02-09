@@ -35,7 +35,7 @@ const ProjectCard = ({ title, href, children }: ProjectCardProps) => {
         ref={ref}
         className="border-primary-dark h-card grid w-full grid-rows-[min-content_auto] border p-3 font-serif md:p-6"
       >
-        <h3 className="max-w-[25ch] font-sans text-4xl font-bold uppercase sm:text-5xl xl:text-7xl">
+        <h3 className="w-[28ch] font-sans text-4xl font-bold uppercase md:text-5xl">
           {title}
         </h3>
         {children}

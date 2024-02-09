@@ -14,7 +14,7 @@ const { title, quote, className } = Astro.props;
     <p class="text-primary-dark font-serif"><slot name="quote" /></p>
     <h2
       aria-label={title}
-      class="flex flex-wrap text-4xl md:text-5xl font-bold uppercase w-60 md:w-80"
+      class="flex flex-wrap text-4xl sm:text-5xl xl:text-7xl font-bold uppercase w-[10ch]"
     >
       <slot name="title" />
     </h2>

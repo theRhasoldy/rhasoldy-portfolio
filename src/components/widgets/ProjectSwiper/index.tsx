@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { type ReactElement, useState } from "react";
 import "swiper/css";
 import "swiper/css/a11y";
 import { A11y, Mousewheel, Parallax } from "swiper/modules";
@@ -9,11 +9,20 @@ import ProjectCard from "./ProjectCard";
 import ProjectWindow from "./ProjectWindow";
 
 type ProjectSwiperProps = {
-  title: string;
-  href: string;
+  websiteTitle: string;
+  websiteHref: string;
+  caseTitle: ReactElement;
+  children: ReactElement;
+  caseHref: string;
 };
 
-const ProjectSwiper = ({ title, href }: ProjectSwiperProps) => {
+const ProjectSwiper = ({
+  websiteTitle,
+  caseTitle,
+  children,
+  websiteHref,
+  caseHref,
+}: ProjectSwiperProps) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const [index, setIndex] = useState(0);
 
@@ -39,17 +48,19 @@ const ProjectSwiper = ({ title, href }: ProjectSwiperProps) => {
       >
         <SwiperSlide>
           <ProjectWindow
-            href={href}
+            href={websiteHref}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
-            alt="Project 1"
+            alt={websiteTitle}
           />
         </SwiperSlide>
         <SwiperSlide>
-          <ProjectCard />
+          <ProjectCard title={caseTitle} href={caseHref}>
+            {children}
+          </ProjectCard>
         </SwiperSlide>
       </Swiper>
       <div className="md:px-9vw mt-6 flex items-center gap-4 px-4">
-        <p className="text-accent font-serif">** {title}</p>
+        <p className="text-accent font-serif">** {websiteTitle}</p>
         <div className="flex gap-2">
           <ActiveButton
             onClick={() => {
