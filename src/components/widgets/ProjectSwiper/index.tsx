@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import "swiper/css";
 import "swiper/css/a11y";
-import { A11y, Mousewheel } from "swiper/modules";
+import { A11y, Mousewheel, Parallax } from "swiper/modules";
 import { Swiper, type SwiperClass, SwiperSlide } from "swiper/react";
 
 import ProjectCard from "./ProjectCard";
@@ -47,7 +47,7 @@ const ProjectSwiper = ({ title, href }: ProjectSwiperProps) => {
           <ProjectCard />
         </SwiperSlide>
       </Swiper>
-      <div className="px-9vw mt-6 flex items-center gap-4">
+      <div className="md:px-9vw mt-6 flex items-center gap-4 px-4">
         <p className="text-accent font-serif">** {title}</p>
         <div className="flex gap-2">
           <ActiveButton

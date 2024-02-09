@@ -34,7 +34,7 @@ const Quote = ({ className, quote }: { className?: string; quote: string }) => {
     <div className="h-20">
       <p
         ref={ref}
-        className={clsx("sm:px-9vw px-4 font-serif md:text-xl", className)}
+        className={clsx("md:px-9vw px-4 font-serif md:text-xl", className)}
       >
         <span aria-hidden className="text-primary-dark block">
           {"/**"}
