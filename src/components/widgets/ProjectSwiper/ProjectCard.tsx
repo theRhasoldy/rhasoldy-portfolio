@@ -33,18 +33,22 @@ const ProjectCard = ({ title, href, children }: ProjectCardProps) => {
     <div className="md:pr-9vw px-4 md:pl-0">
       <article
         ref={ref}
-        className="border-primary-dark h-card grid w-full grid-rows-[min-content_auto] border p-3 font-serif md:p-6"
+        className="border-primary-dark h-card flex w-full flex-col justify-between border font-serif"
       >
-        <h3 className="max-w-[25ch] font-sans text-4xl font-bold uppercase sm:text-5xl xl:text-7xl">
-          {title}
-        </h3>
-        {children}
-        <a
-          className="border-secondary text-secondary hover:bg-secondary hover:text-background w-fit self-end border px-4 py-2"
-          href={href}
-        >
-          read case study
-        </a>
+        <div className="p-4 md:p-8">
+          <h3 className="mb-4 max-w-[25ch] font-sans text-4xl font-bold uppercase sm:text-5xl md:mb-8 xl:text-7xl">
+            {title}
+          </h3>
+          {children}
+        </div>
+        <div className="border-primary-dark border-t p-4 py-6 md:p-8 md:py-10">
+          <a
+            className="border-secondary text-secondary hover:bg-secondary hover:text-background w-fit border px-4 py-2"
+            href={href}
+          >
+            read case study
+          </a>
+        </div>
       </article>
     </div>
   );
