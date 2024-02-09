@@ -26,7 +26,8 @@ export default {
       },
       height: {
         "screen-mobile": "100dvh",
-        card: "clamp(22rem, 48vw, 48rem)",
+        window: "clamp(22rem, 48vw, 48rem)",
+        card: "clamp(25.1rem, 50vw, 51.1rem)",
       },
       minHeight: {
         "screen-mobile": "calc(100dvh - 4.75rem)",
