@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@uidotdev/usehooks";
 import { useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
@@ -5,7 +6,11 @@ const ProjectCard = () => {
   const [ref, animate] = useAnimate();
   const isInView = useInView(ref);
 
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   useEffect(() => {
+    if (isMobile) return;
+
     animate(
       ref.current,
       { x: [100, 0], opacity: [0.25, 1] },
