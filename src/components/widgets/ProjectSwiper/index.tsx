@@ -1,12 +1,11 @@
+import ProjectCard from "@components/widgets/ProjectSwiper/ProjectCard";
+import ProjectWindow from "@components/widgets/ProjectSwiper/ProjectWindow";
 import clsx from "clsx";
 import { type ReactElement, type ReactNode, useState } from "react";
 import "swiper/css";
 import "swiper/css/a11y";
 import { A11y, Mousewheel, Parallax } from "swiper/modules";
 import { Swiper, type SwiperClass, SwiperSlide } from "swiper/react";
-
-import ProjectCard from "./ProjectCard";
-import ProjectWindow from "./ProjectWindow";
 
 type ProjectSwiperProps = {
   websiteTitle: string;
@@ -59,8 +58,8 @@ const ProjectSwiper = ({
           </ProjectCard>
         </SwiperSlide>
       </Swiper>
-      <div className="md:px-9vw mt-6 flex items-center gap-4 px-4">
-        <p className="text-accent font-serif">** {websiteTitle}</p>
+      <div className="mt-6 flex items-center gap-4 px-4 md:px-9vw">
+        <p className="font-serif text-accent">** {websiteTitle}</p>
         <div className="flex gap-2">
           <ActiveButton
             onClick={() => {
@@ -92,8 +91,8 @@ const ActiveButton = ({
   return (
     <button
       className={clsx(
-        active ? "bg-accent" : "border-accent border",
-        "hover:bg-accent-light size-3 cursor-pointer transition-all duration-500",
+        active ? "bg-accent" : "border border-accent",
+        "size-3 cursor-pointer transition-all duration-500 hover:bg-accent-light",
       )}
       onClick={onClick}
     />

@@ -1,4 +1,4 @@
-import WindowControls from "../../icons/window-controls.svg";
+import WindowControls from "@components/icons/window-controls.svg";
 
 const ProjectWindow = ({
   src,
@@ -10,12 +10,12 @@ const ProjectWindow = ({
   href: string;
 }) => {
   return (
-    <div className="md:pl-9vw px-4 md:px-0">
+    <div className="px-4 md:px-0 md:pl-9vw">
       <a
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="border-primary-dark block border text-end"
+        className="block border border-primary-dark text-end"
       >
         <img
           src={WindowControls.src}
@@ -23,7 +23,7 @@ const ProjectWindow = ({
           alt=""
         />
         <img
-          className="h-window border-primary-dark w-full border-t object-cover"
+          className="h-window w-full border-t border-primary-dark object-cover"
           src={src}
           alt={alt}
         />

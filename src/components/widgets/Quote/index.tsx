@@ -1,3 +1,4 @@
+import Blinker from "@components/widgets/Quote/Blinker";
 import clsx from "clsx";
 import {
   animate,
@@ -7,8 +8,6 @@ import {
   useTransform,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
-
-import Blinker from "./Blinker";
 
 const Quote = ({ className, quote }: { className?: string; quote: string }) => {
   const ref = useRef(null);
@@ -33,14 +32,14 @@ const Quote = ({ className, quote }: { className?: string; quote: string }) => {
   return (
     <p
       ref={ref}
-      className={clsx("md:px-9vw px-4 font-serif md:text-xl", className)}
+      className={clsx("px-4 font-serif md:px-9vw md:text-xl", className)}
     >
-      <span aria-hidden className="text-primary-dark block">
+      <span aria-hidden className="block text-primary-dark">
         {"/**"}
       </span>
       <motion.span>{displayText}</motion.span>
       <Blinker />
-      <span aria-hidden className="text-primary-dark block">
+      <span aria-hidden className="block text-primary-dark">
         {"*/"}
       </span>
     </p>
