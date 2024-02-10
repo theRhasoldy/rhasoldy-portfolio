@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { type ReactElement, useState } from "react";
+import { type ReactElement, type ReactNode, useState } from "react";
 import "swiper/css";
 import "swiper/css/a11y";
 import { A11y, Mousewheel, Parallax } from "swiper/modules";
@@ -11,7 +11,7 @@ import ProjectWindow from "./ProjectWindow";
 type ProjectSwiperProps = {
   websiteTitle: string;
   websiteHref: string;
-  caseTitle: ReactElement;
+  caseTitle: ReactNode;
   children: ReactElement;
   caseHref: string;
 };

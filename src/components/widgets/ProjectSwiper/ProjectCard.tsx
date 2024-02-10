@@ -43,7 +43,7 @@ const ProjectCard = ({ title, href, children }: ProjectCardProps) => {
         </div>
         <div className="border-primary-dark border-t p-4 py-6 md:p-8 md:py-10">
           <a
-            className="border-secondary text-secondary hover:bg-secondary hover:text-background w-fit border px-4 py-2"
+            className="border-secondary text-secondary hover:bg-secondary hover:text-background w-fit border px-4 py-2 transition-all"
             href={href}
           >
             read case study
