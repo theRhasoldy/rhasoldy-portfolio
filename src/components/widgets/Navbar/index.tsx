@@ -1,8 +1,9 @@
+import { useMediaQuery } from "@uidotdev/usehooks";
+
 import CV from "@components/icons/cv.svg";
 import Github from "@components/icons/github.svg";
 import Linkedin from "@components/icons/linkedin.svg";
 import RhasoldyLogo from "@components/icons/rhasoldy.svg";
-import { useMediaQuery } from "@uidotdev/usehooks";
 
 const Navbar = () => {
   const links = [
