@@ -1,11 +1,12 @@
-import ProjectCard from "@components/widgets/ProjectSwiper/ProjectCard";
-import ProjectWindow from "@components/widgets/ProjectSwiper/ProjectWindow";
 import clsx from "clsx";
 import { type ReactElement, type ReactNode, useState } from "react";
 import "swiper/css";
 import "swiper/css/a11y";
 import { A11y, Mousewheel, Parallax } from "swiper/modules";
 import { Swiper, type SwiperClass, SwiperSlide } from "swiper/react";
+
+import ProjectCard from "@components/widgets/ProjectSwiper/ProjectCard";
+import ProjectWindow from "@components/widgets/ProjectSwiper/ProjectWindow";
 
 type ProjectSwiperProps = {
   websiteTitle: string;

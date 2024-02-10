@@ -1,4 +1,3 @@
-import Blinker from "@components/widgets/Quote/Blinker";
 import clsx from "clsx";
 import {
   animate,
@@ -8,6 +7,8 @@ import {
   useTransform,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
+
+import Blinker from "@components/widgets/Quote/Blinker";
 
 const Quote = ({ className, quote }: { className?: string; quote: string }) => {
   const ref = useRef(null);
