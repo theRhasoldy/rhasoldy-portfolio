@@ -17,13 +17,22 @@ import SectionLayout from "@layouts/SectionLayout.astro";
 
   <div>
     <ProjectSwiper
-      websiteTitle="release clinic"
-      websiteHref="https://releaseclinic.com"
-      caseTitle="Portfolio of the mastermind of physiotherapy in Egypt"
-      caseHref="/posts/release-clinic"
       client:only="react"
+      website={{
+        title: "release clinic",
+        href: "https://releaseclinic.com",
+      }}
+      content={{
+        title: "Portfolio of the mastermind of physiotherapy in Egypt",
+        href: "/posts/release-clinic",
+      }}
+      projectImage={{
+        src: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+        alt: "",
+        href: "/",
+      }}
     >
-      <div class="grid md:grid-cols-2 gap-4 md:gap-16">
+      <div class="grid gap-4 md:grid-cols-2 md:gap-16">
         <p>
           founded by dr. Mohamed Shawky, Release Clinic quickly became the go-to
           facility for professional athletes.
@@ -32,12 +41,13 @@ import SectionLayout from "@layouts/SectionLayout.astro";
           in collaboration with
           <a
             class="underline hover:text-accent"
-            href="https://revivecreates.com">revive creates</a
-          >.
+            href="https://revivecreates.com"
+          >
+            revive creates
+          </a>
+          .
         </p>
       </div>
     </ProjectSwiper>
-    <div class="mt-192"></div>
-    <div class="mt-192"></div>
   </div>
 </SectionLayout>
