@@ -18,7 +18,6 @@ export type ProjectSwiperProps = {
     href: string;
   };
   projectImage: {
-    href: string;
     src: string;
     alt: string;
   };
@@ -37,7 +36,7 @@ const ProjectSwiper = ({
   return (
     <div>
       <Swiper
-        grabCursor
+        className="[&_img]:grayscale [&_img]:transition-all [&_img]:duration-1000 [&_img]:hover:grayscale-0"
         mousewheel={{ thresholdTime: 200, forceToAxis: true }}
         resistanceRatio={0.95}
         speed={750}
@@ -56,7 +55,7 @@ const ProjectSwiper = ({
       >
         <SwiperSlide>
           <ProjectWindow
-            href={projectImage.href}
+            href={website.href}
             src={projectImage.src}
             alt={projectImage.alt}
           />
