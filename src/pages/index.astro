@@ -7,10 +7,18 @@ import DefaultLayout from "@layouts/DefaultLayout.astro";
 
 <DefaultLayout title="Home" description="Home Page">
   <Hero />
-  <Quote
-    quote="A developer with a design background focusing on creating experiences that deliver and kickstart your dreams"
-    client:only="react"
-    className="my-64"
-  />
+  <article class="flex flex-col gap-16 md:px-22vw my-64">
+    <h2 class="text-accent uppercase text-7xl">
+      Hi, Hello My Name is Nour, That's me, who i am
+    </h2>
+    <div class="grid grid-cols-2">
+      <div></div>
+      <Quote
+        quote="A developer with a design background focusing on creating experiences that deliver and kickstart your dreams"
+        client:only="react"
+        className="min-h-28"
+      />
+    </div>
+  </article>
   <Work />
 </DefaultLayout>

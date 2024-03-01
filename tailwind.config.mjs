@@ -37,6 +37,7 @@ export default {
       },
       padding: {
         "9vw": "9vw",
+        "22vw": "22vw",
       },
       fontSize: {
         clamp: "clamp(2rem, 12vw, 14.5rem)",
