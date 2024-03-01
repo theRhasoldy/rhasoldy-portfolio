@@ -14,6 +14,7 @@ export type ProjectSwiperProps = {
     href: string;
   };
   website: {
+    linkColor: string;
     title: string;
     href: string;
   };
@@ -55,6 +56,7 @@ const ProjectSwiper = ({
       >
         <SwiperSlide>
           <ProjectWindow
+            linkColor={website.linkColor}
             href={website.href}
             src={projectImage.src}
             alt={projectImage.alt}
