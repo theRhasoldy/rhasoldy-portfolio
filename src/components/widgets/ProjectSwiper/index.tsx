@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { type ReactElement, type ReactNode, useState } from "react";
+import { type ReactNode, useState } from "react";
 import "swiper/css";
 import "swiper/css/a11y";
 import { A11y, Mousewheel, Parallax } from "swiper/modules";
@@ -8,20 +8,27 @@ import { Swiper, type SwiperClass, SwiperSlide } from "swiper/react";
 import ProjectCard from "@components/widgets/ProjectSwiper/ProjectCard";
 import ProjectWindow from "@components/widgets/ProjectSwiper/ProjectWindow";
 
-type ProjectSwiperProps = {
-  websiteTitle: string;
-  websiteHref: string;
-  caseTitle: ReactNode;
-  children: ReactElement;
-  caseHref: string;
+export type ProjectSwiperProps = {
+  content: {
+    title: ReactNode;
+    href: string;
+  };
+  website: {
+    title: string;
+    href: string;
+  };
+  projectImage: {
+    src: string;
+    alt: string;
+  };
+  children: astroHTML.JSX.Element;
 };
 
 const ProjectSwiper = ({
-  websiteTitle,
-  caseTitle,
+  website,
+  content,
   children,
-  websiteHref,
-  caseHref,
+  projectImage,
 }: ProjectSwiperProps) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const [index, setIndex] = useState(0);
@@ -29,7 +36,7 @@ const ProjectSwiper = ({
   return (
     <div>
       <Swiper
-        grabCursor
+        className="[&_img]:grayscale [&_img]:transition-all [&_img]:duration-1000 [&_img]:hover:grayscale-0"
         mousewheel={{ thresholdTime: 200, forceToAxis: true }}
         resistanceRatio={0.95}
         speed={750}
@@ -48,19 +55,19 @@ const ProjectSwiper = ({
       >
         <SwiperSlide>
           <ProjectWindow
-            href={websiteHref}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
-            alt={websiteTitle}
+            href={website.href}
+            src={projectImage.src}
+            alt={projectImage.alt}
           />
         </SwiperSlide>
         <SwiperSlide>
-          <ProjectCard title={caseTitle} href={caseHref}>
+          <ProjectCard title={content.title} href={content.href}>
             {children}
           </ProjectCard>
         </SwiperSlide>
       </Swiper>
       <div className="mt-6 flex items-center gap-4 px-4 md:px-9vw">
-        <p className="font-serif text-accent">** {websiteTitle}</p>
+        <p className="font-serif text-accent">** {website.title}</p>
         <div className="flex gap-2">
           <ActiveButton
             onClick={() => {
