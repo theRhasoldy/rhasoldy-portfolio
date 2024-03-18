@@ -1,6 +1,10 @@
 ---
-import "../styles/global.css";
-import Navbar from "../components/widgets/Navbar";
+import { ViewTransitions } from "astro:transitions";
+
+import Navbar from "@components/widgets/Navbar";
+import SmoothScroll from "@components/widgets/SmoothScroll";
+import "@styles/global.css";
+
 type Props = {
   title: string;
   description: string;
@@ -18,9 +22,12 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="author" content="rhasoldy" />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
-  <body class="bg-background text-dominant">
+  <body class="bg-background text-primary">
     <Navbar client:only="react" />
-    <slot />
+    <SmoothScroll client:only="react">
+      <slot />
+    </SmoothScroll>
   </body>
 </html>
