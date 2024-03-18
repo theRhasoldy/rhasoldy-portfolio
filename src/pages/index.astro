@@ -1,6 +1,7 @@
 ---
 import Hero from "@components/widgets/Hero/index.astro";
 import Quote from "@components/widgets/Quote";
+import Skills from "@components/widgets/Skills/index.astro";
 import Work from "@components/widgets/Work/index.astro";
 import DefaultLayout from "@layouts/DefaultLayout.astro";
 ---
@@ -16,9 +17,10 @@ import DefaultLayout from "@layouts/DefaultLayout.astro";
       <Quote
         quote="A developer with a design background focusing on creating experiences that deliver and kickstart your dreams"
         client:only="react"
-        className="min-h-28"
+        className="min-h-32"
       />
     </div>
   </article>
   <Work />
+  <Skills />
 </DefaultLayout>
