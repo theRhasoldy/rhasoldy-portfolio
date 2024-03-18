@@ -9,20 +9,35 @@ export default {
     extend: {
       colors: {
         background: "#101010",
-        dominant: "#FDFDFD",
         primary: {
+          DEFAULT: "#FDFDFD",
+          dark: "#888888",
+        },
+        secondary: {
           light: "#F5F5F5",
           DEFAULT: "#FF4FA3",
           dark: "#F5F5F5",
         },
-        secondary: {
-          light: "#F5F5F5",
+        accent: {
+          light: "#FFF8EB",
           DEFAULT: "#FFCF70",
-          dark: "#F5F5F5",
+          dark: "#FFA320",
         },
+      },
+      height: {
+        "screen-mobile": "100dvh",
+        window: "clamp(30rem, 40vw, 40rem)",
+        card: "clamp(32.95rem, 43.1vw, 43.1rem)",
+      },
+      minHeight: {
+        "screen-mobile": "calc(100dvh - 4.75rem)",
+      },
+      margin: {
+        192: "12rem",
       },
       padding: {
         "9vw": "9vw",
+        "22vw": "22vw",
       },
       fontSize: {
         clamp: "clamp(2rem, 12vw, 14.5rem)",

@@ -66,6 +66,7 @@ module.exports = {
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
         "react/no-unknown-property": "off",
+        "react/jsx-no-undef": "off",
       },
     },
   ],
@@ -73,6 +74,7 @@ module.exports = {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    "tailwindcss/classnames-order": "off",
     indent: ["warn", 2],
     "linebreak-style": ["warn", "unix"],
     quotes: ["warn", "double"],

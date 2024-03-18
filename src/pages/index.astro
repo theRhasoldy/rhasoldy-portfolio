@@ -1,8 +1,26 @@
 ---
-import Hero from "../components/widgets/Hero/index.astro";
-import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Hero from "@components/widgets/Hero/index.astro";
+import Quote from "@components/widgets/Quote";
+import Skills from "@components/widgets/Skills/index.astro";
+import Work from "@components/widgets/Work/index.astro";
+import DefaultLayout from "@layouts/DefaultLayout.astro";
 ---
 
 <DefaultLayout title="Home" description="Home Page">
   <Hero />
+  <article class="flex flex-col gap-16 md:px-22vw my-64">
+    <h2 class="text-accent uppercase text-7xl">
+      Hi, Hello My Name is Nour, That's me, who i am
+    </h2>
+    <div class="grid grid-cols-2">
+      <div></div>
+      <Quote
+        quote="A developer with a design background focusing on creating experiences that deliver and kickstart your dreams"
+        client:only="react"
+        className="min-h-32"
+      />
+    </div>
+  </article>
+  <Work />
+  <Skills />
 </DefaultLayout>

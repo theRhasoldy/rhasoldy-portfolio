@@ -1,0 +1,85 @@
+---
+import ProjectSwiper from "@components/widgets/ProjectSwiper";
+
+import Release from "../../../assets/images/release.jpg";
+import Vincent from "../../../assets/images/vincent.jpg";
+---
+
+<div class="flex flex-col gap-24">
+  <ProjectSwiper
+    client:only="react"
+    website={{
+      linkColor: "#fff",
+      title: "release clinic",
+      href: "https://releaserehab.com",
+    }}
+    content={{
+      title: "Portfolio of the mastermind of physiotherapy in Egypt",
+      href: "/posts/release-clinic",
+    }}
+    projectImage={{
+      src: Release.src,
+      alt: "",
+    }}
+  >
+    <div class="grid gap-4 md:grid-cols-2 md:gap-16">
+      <p>
+        founded by dr. Mohamed Shawky, Release Clinic quickly became the go-to
+        facility for professional athletes.
+      </p>
+      <p>
+        in collaboration with
+        <a
+          class="underline hover:text-accent"
+          target="_blank"
+          rel="noreferrer"
+          href="https://revivecreates.com"
+        >
+          revive creates</a
+        >.
+      </p>
+    </div>
+  </ProjectSwiper>
+  <ProjectSwiper
+    client:only="react"
+    website={{
+      linkColor: "#FFCB5B",
+      title: "vincent portfolio",
+      href: "https://releaseclinic.com",
+    }}
+    content={{
+      title: "Portfolio of a broken artist",
+      href: "/posts/release-clinic",
+    }}
+    projectImage={{
+      src: Vincent.src,
+      alt: "",
+    }}
+  >
+    <div class="grid gap-4 md:grid-cols-2 md:gap-16">
+      <p>
+        founded by dr. Mohamed Shawky, Release Clinic quickly became the go-to
+        facility for professional athletes.
+      </p>
+      <p>
+        in collaboration with
+        <a class="underline hover:text-accent" href="https://revivecreates.com">
+          revive creates</a
+        >.
+      </p>
+    </div>
+  </ProjectSwiper>
+
+  <div class="w-full flex flex-col items-center">
+    <p class="text-primary-dark font-serif">|| discover</p>
+    <p
+      aria-label="More Projects on Github"
+      class="flex flex-wrap text-xl sm:text-2xl xl:text-4xl font-bold uppercase gap-[0.25ch]"
+    >
+      More Projects on<a
+        class="underline hover:text-secondary"
+        href="https://github.com/theRhasoldy">Github</a
+      >
+    </p>
+  </div>
+</div>

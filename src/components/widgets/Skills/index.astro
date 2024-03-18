@@ -1,0 +1,44 @@
+---
+import Pill from "@components/common/Pill/index.astro";
+import SectionLayout from "@layouts/SectionLayout.astro";
+
+const skills = [
+  "javascript",
+  "typescript",
+  "react",
+  "next js",
+  "astro",
+  "css/scss",
+  "tailwindcss",
+  "ui libraries",
+  "headless cms",
+  "build tools",
+  "vim",
+  "ui/ux",
+  "figma",
+  "git",
+  "agile",
+  "jira",
+  "bash",
+];
+---
+
+<SectionLayout
+  title="Skills & Expertise"
+  quote="a list of technologies and stacks i’ve worked with in my projects... i use vim btw"
+  className="py-64"
+>
+  <Fragment slot="quote">{"//up next"}</Fragment>
+
+  <Fragment slot="title">
+    <span class="w-full">Skills</span>
+    <div class="text-end w-full">
+      <span class="text-secondary font-serif">&</span>
+      <span class="text-end">Expertise</span>
+    </div>
+  </Fragment>
+
+  <div class="flex w-full flex-wrap md:px-22vw justify-center gap-4">
+    {skills.map(skill => <Pill text={skill} isGreen={skill === "vim"} />)}
+  </div>
+</SectionLayout>
